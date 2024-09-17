@@ -17,12 +17,13 @@ pipeline {
         }
         stage('Install Cypress') {
             steps {
+                sh 'Set-ExecutionPolicy RemoteSigned -Scope Process'
                 sh 'yarn add cypress --dev'
             }
         }
         stage('Run e2e Tests') {
             steps {
-                sh 'xvfb-run --auto-servernum -- npx cypress run'
+                sh 'npx cypress run'
             }
         }
     }
