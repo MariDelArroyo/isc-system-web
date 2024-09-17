@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Clone Project') {
             steps {
-                git 'https://github.com/MariDelArroyo/isc-system-web.git'
+                git branch:'qa', url: 'https://github.com/MariDelArroyo/isc-system-web.git'
             }
         }
         stage('Instalar dependencias para cypress') {
