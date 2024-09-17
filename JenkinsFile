@@ -17,7 +17,6 @@ pipeline {
         }
         stage('Install Cypress') {
             steps {
-                sh 'Set-ExecutionPolicy RemoteSigned -Scope Process'
                 sh 'yarn add cypress --dev'
             }
         }
